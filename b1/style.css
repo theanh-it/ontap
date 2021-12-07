@@ -1,0 +1,30 @@
+h1{
+    color: red;
+    background-image: url(https://file.hstatic.net/1000253397/article/mau_background_don_gian_11_768x536_bffdffbf5cd74dc4a3426fdccc2d180f_master.jpg);
+}
+a{
+    text-decoration: none;
+    transition: 0.4s;
+    color: tomato;
+}
+a:link{
+    
+}
+a:hover{
+    color: blue;
+    text-decoration: revert;
+}
+a:visited{
+   
+}
+a:active{
+    color: red;
+}
+
+h2{
+    color: blue;
+    background: red;
+}
+p {
+    color: yellow;
+}
