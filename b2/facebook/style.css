@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    box-shadow: 1px 1px 1px #eee;
+}
+header .left{
+    width: 100%;
+    max-width: 25%;
+    min-width: 25%;
+    padding: 8px 10px 8px 15px;
+}
+header .left .left-box{
+   display: flex;
+}
+header .left .left-box img{
+   height: 40px;
+   width: 40px;
+   margin-right: 5px;
+}
+header .left .left-box .search{
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+header .left .left-box .search i{
+   position: absolute;
+   top: 50%;
+   left: 15px;
+   margin-top: -8px;
+   color: #65676B;
+}
+header .left .left-box .search input{
+   height: 40px;
+   width: 100%;
+   max-width: 280px;
+   border: none;
+   outline: none;
+   background-color: #F0F2F5;
+   padding: 0px 15px 0px 35px;
+   font-size: 16px;
+   border-radius: 50px;
+}
+header .mid{
+    width: 100%;
+    max-width: 50%;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+header .mid .mid-box{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    max-width: 520px;
+}
+header .mid .mid-box li{
+    flex-grow: 1;
+    padding: 4px 5px 1px 5px;
+    border-bottom: 3px solid white;
+}
+header .mid .mid-box li.active{
+    border-bottom: 3px solid #1B74E4;
+}
+header .mid .mid-box li:focus-within{
+    border-bottom: 3px solid #1B74E4;
+}
+header .mid .mid-box li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+header .mid .mid-box li a:hover{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+}
+header .mid .mid-box li.active a:hover{
+    background: none;
+}
+header .mid .mid-box li a i{
+    font-size: 25px;
+    color: #8B8C8F;
+}
+header .right{
+    width: 100%;
+    max-width: 25%;
+    min-width: 25%;
+    display: flex;
+    justify-content: right;
+}
+header .right .right-box{
+    width: 100%;
+    max-width: 316px;
+    display: flex;
+    margin-right: 15px;
+}
+header .right .right-box .user{
+    display: flex;
+    align-items: center;
+    width: 110px;
+}
+header .right .right-box .user img{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+header .right .right-box .user span{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+header .right .right-box .other{
+    list-style: none;
+    display: flex;
+}
+header .right .right-box .other li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+}
+header .right .right-box .other li a{
+    background: #E4E6EB;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+header .right .right-box .other li a i{
+    color: black;
+}
