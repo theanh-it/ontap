@@ -1,0 +1,466 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 975px;
+    margin: 0px auto;
+}
+
+header {
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+}
+
+header .main {
+    display: flex;
+}
+
+header .main>div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .main .logo {
+    justify-content: left;
+    height: 54px;
+    min-width: 360px;
+}
+
+header .main .logo img {
+    margin-top: 5px;
+}
+
+header .main .search .box-search {
+    border: 1px solid #DBDBDB;
+    height: 28px;
+    width: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+}
+
+header .main .search .box-search i {
+    font-size: 12px;
+    color: #A5A7AA;
+    margin-right: 3px;
+}
+
+header .main .search .box-search .text {
+    font-size: 12px;
+    color: #A5A7AA;
+}
+
+header .main .tools {
+    justify-content: flex-end;
+    min-width: 360px;
+}
+
+header .main .tools a {
+    color: #a5a7aa;
+    margin-left: 16px;
+    position: relative;
+}
+
+header .main .tools a.active {
+    color: black;
+}
+
+header .main .tools a i {
+    font-size: 25px;
+}
+
+header .main .tools a .user {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+header .main .tools a .menu{
+    list-style: none;
+    display: none;
+}
+header .main .tools a:focus .menu::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -4px;
+    right: 32px;
+    box-shadow: -1px -1px 8px #dbdbdb;
+    z-index: 1;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+header .main .tools a:focus .menu{
+    animation: show 0.4s forwards;
+    list-style: none;
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid #eee;
+    top: 42px;
+    right: -30px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px 0px #ECECEC;
+}
+header .main .tools a:focus .menu li{
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 15px 15px 0px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #262626;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+header .main .tools a:focus .menu.user-option li svg{
+    margin-right: 12px;
+}
+header .main .tools a:focus .menu.user-option li:last-child{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #DBDBDB;
+    border-radius: 0px 0px 10px 10px;
+}
+header .main .tools a:focus .menu.noti-list{
+    width: 500px;
+}
+header .main .tools a:focus .menu.menu.noti-list li:last-child{
+    padding-bottom: 15px;
+}
+header .main .tools a:focus .menu.noti-list li .box-user{
+    flex-grow: 1;
+    display: flex;
+}
+header .main .tools a:focus .menu.noti-list li .box-user img{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+header .main .tools a:focus .menu.noti-list li .box-user .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header .main .tools a:focus .menu.noti-list li .box-user .about h3{
+    font-size: 13px;
+}
+header .main .tools a:focus .menu.noti-list li .box-user .about p{
+    font-size: 13px;
+}
+header .main .tools a:focus .menu.noti-list li .box-user .about p span{
+    color: #a5a7aa;
+}
+
+main {
+    margin-top: 56px;
+    padding-top: 30px;
+    background-color: #FAFAFA;
+}
+
+main .main {
+    display: flex;
+}
+
+main .main .left {
+    margin-right: 28px;
+    min-width: 614px;
+    max-width: 614px;
+    flex-grow: 2;
+}
+
+main .main .left .story {
+    border: 1px solid #DBDBDB;
+    padding: 16px 10px;
+    margin-bottom: 24px;
+    background-color: white;
+}
+
+main .main .left .story a {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #696969;
+}
+
+main .main .left .story a .avata {
+    height: 56px;
+    width: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main .main .left .story a .user {
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+main .main .left .post {
+    border: 1px solid #DBDBDB;
+    background-color: white;
+}
+
+main .main .left .post .header {
+    display: flex;
+    padding: 9px 15px;
+}
+
+main .main .left .post .header .user {
+    flex-grow: 1;
+    display: flex;
+}
+
+main .main .left .post .header .user a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .main .left .post .header .user .avata {
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main .main .left .post .header .user .name {
+    color: #262626;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+}
+
+main .main .left .post .header .tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #262626;
+}
+
+main .main .left .post .image {}
+
+main .main .left .post .image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+main .main .left .post .footer i {
+    font-size: 24px;
+    color: #808080;
+}
+
+main .main .left .post .footer {}
+
+main .main .left .post .footer .row {
+    display: flex;
+    padding: 0 15px;
+}
+
+main .main .left .post .footer .row .col-left {
+    flex-grow: 1;
+    padding: 6px 0px;
+}
+
+main .main .left .post .footer .row .col-left a {
+    margin-right: 10px;
+}
+
+main .main .left .post .footer .row .col-left a.active i {
+    color: red;
+}
+
+main .main .left .post .footer .row .col-right {
+    padding: 6px 0px;
+}
+
+main .main .left .post .footer .row.like {
+    margin-top: 3px;
+}
+
+main .main .left .post .footer .row.like span {
+    color: #262626;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+main .main .left .post .footer .row.momment {
+    margin-top: 7px;
+    margin-bottom: 11px;
+}
+
+main .main .left .post .footer .row.momment span {
+    color: #696969;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+}
+
+main .main .left .post .footer .row.comment {
+    margin-top: 3px;
+    border-top: 1px solid #dbdbdb;
+    padding: 15px;
+}
+
+main .main .left .post .footer .row.comment input {
+    width: 100%;
+    border: none;
+    font-size: 15px;
+}
+
+main .main .left .post .footer .row.comment input:focus {
+    outline: none;
+}
+
+main .main .left .post .footer .row.comment a {
+    color: #BEE4FC;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+main .main .right {
+    flex-grow: 1;
+    padding-top: 16px;
+}
+
+main .main .right .row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+main .main .right .row .user {
+    flex-grow: 1;
+    display: flex;
+}
+
+main .main .right .row .user img.avata {
+    height: 56px;
+    width: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main .main .right .row .user .about {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .main .right .row .user .about .username {
+    color: #262626;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+main .main .right .row .user .about .fullname {
+    color: #696969;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+}
+
+main .main .right .row .action {
+    display: flex;
+    align-items: center;
+}
+
+main .main .right .row .action a {
+    color: #0396F6;
+    font-size: 13px;
+}
+
+main .main .right .row.suggest {
+    display: block;
+}
+
+main .main .right .row.suggest .header {
+    padding: 15px 0px;
+    display: flex;
+}
+
+main .main .right .row.suggest .header .name {
+    flex-grow: 1;
+    color: #8E8E8E;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+main .main .right .row.suggest .header .action {
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+main .main .right .row.suggest .user-suggest {
+    display: flex;
+    padding: 7px 0px;
+}
+
+main .main .right .row.suggest .user-suggest .user img.avata {
+    height: 32px;
+    width: 32px;
+}
+
+main .main .right .row.other {
+    display: block;
+    margin-top: 25px;
+}
+
+main .main .right .row.other ul {
+    list-style: none;
+}
+
+main .main .right .row.other ul li {
+    list-style: none;
+    display: inline-block;
+    color: #D4D4D4;
+    font-size: 12px;
+}
+
+main .main .right .row.other span {
+    color: #D4D4D4;
+    font-size: 12px;
+    display: block;
+    margin-top: 16px;
+}
